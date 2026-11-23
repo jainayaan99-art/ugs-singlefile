@@ -62,6 +62,7 @@ let files = [
 "cladventurecapitalist",
 "claflac",
 "claftertheweek",
+"clagameaboutballswithweapons",
 "clagariolite",
 "clageofwar",
 "clageofwar2",
@@ -100,6 +101,7 @@ let files = [
 "clangry-birdsspace",
 "clangrybirds-space",
 "clangrybirds",
+"clangrybirdsonline",
 "clangrybirdsshowdown",
 "clangrybirdsspace",
 "clanimalcrossingwildworld",
@@ -245,6 +247,7 @@ let files = [
 "clblazedrifter",
 "clbleachvsnaruto",
 "clblightborne",
+"clblobbyio",
 "clblobsstory2",
 "clblockblast",
 "clblockblastv2",
@@ -321,6 +324,7 @@ let files = [
 "clbubbletankstd",
 "clbubsy",
 "clbuckshotroulette",
+"clbuild",
 "clbuildnowgg",
 "clbulletforce",
 "clbunnyland",
@@ -343,6 +347,7 @@ let files = [
 "clcandybox1",
 "clcannonballs3d",
 "clcannonfodder",
+"clcapuchinsf",
 "clcaptainlang",
 "clcaptchaware",
 "clcapybaraclicker",
@@ -374,9 +379,11 @@ let files = [
 "clcelestemariodx",
 "clCeliasStupidROMHack",
 "clcellardoor",
+"clcellmachine",
 "clCellToSingularity",
 "clcentipedearcade",
 "clchainofmemories",
+"clchampionisland",
 "clchaosfaction2",
 "clcheckers",
 "clcheesechompers3d",
@@ -425,6 +432,7 @@ let files = [
 "clcodworldatwar",
 "clcoffeemaker",
 "clcoldpines",
+"clColorboxmustard",
 "clcolorburst3d",
 "clcolormatch",
 "clcolorwatersort3d",
@@ -565,6 +573,7 @@ let files = [
 "cldkccompetitioncart",
 "clDKNESCollection(1)",
 "clDKNESCollection",
+"clDigOutofPrison",
 "cldoblox",
 "cldogeminer",
 "cldogeminer2",
@@ -696,6 +705,7 @@ let files = [
 "clepicbattlefantasy5",
 "clescalatingduel",
 "clescaperoad",
+"clescaperoad-2",
 "clescaperoadcity2",
 "clescapeschoolduel",
 "clet",
@@ -716,6 +726,7 @@ let files = [
 "clfallout",
 "clfamidash",
 "clfamidash128",
+"clfamidash2alpha",
 "clfamidashAlbum128",
 "clfamidashBSides128",
 "clfamidashCSides128",
@@ -793,6 +804,7 @@ let files = [
 "clfivenightsatyoshis",
 "clflappybird",
 "clflashsonic",
+"clFleurdeLis",
 "clfloodrunner",
 "clfloodrunner2",
 "clfloodrunner4",
@@ -942,7 +954,11 @@ let files = [
 "clgangsterbros",
 "clgarcello",
 "clgarfcaughtinact",
+"clgdbreeze",
 "clgdlite",
+"clgdsubzero",
+"clgdwaves67",
+"clgdwaveover100mb",
 "clgeneralchaos",
 "clgenericfightermaybe",
 "clgeometrydashscratch",
@@ -950,6 +966,7 @@ let files = [
 "clgeorgeandtheprinter",
 "clgetawayshootout",
 "clgetontop",
+"clgettingoverit",
 "clGettothetopalthoughthereisnotop",
 "clgetyoked",
 "clggshinobi",
@@ -1014,6 +1031,7 @@ let files = [
 "clgta2",
 "clgta22",
 "clgta2alt",
+"clgta3",
 "clgtaalt",
 "clgtaalty",
 "clgtachina",
@@ -1074,6 +1092,7 @@ let files = [
 "clhighstakes",
 "clhighwayracer2",
 "clhighwaytraffic3d",
+"clHillClimbRacing2",
 "clhillclimbracinglite",
 "clHiNoHomo",
 "clhipsterkickball",
@@ -2931,52 +2950,40 @@ let files = [
 "supremeduelistfix",
 "thiefpuzzle",
 "unpkg",
-"cl?"
+"cl?",
+"clcatmario",
+"clCeliasStupidROMHack",
+"clDigOutofPrison",
+"cldokidokiliteratureclub",
+"cldrivemad",
+"clfamidash2alpha",
+"clFleurdeLis",
+"clgranny3",
+"clgrowdenio",
+"clhalloween2600",
+"cllegoracers",
+"clpaperio3d",
+"clpokeaestheticred",
+"clpokecrystaladvanceredux",
+"clpokecrystallegacy",
+"clpokeemeraldextendedcut",
+"clpokeemeraldlegacy",
+"clpokeyellowlegacy",
+"clsausageflip",
+"clswitch",
+"clwariowaretouched"
 ];
 function generateAllSections() {
   try {
     document.getElementById("lolbutton").remove();
   } catch (e) {}
   const allChars = [
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
+    "0","1","2","3","4","5","6","7","8","9",
+    "A","B","C","D","E","F","G","H","I","J","K","L","M",
+    "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
   ];
 
-   const filesByChar = {};
+  const filesByChar = {};
   allChars.forEach((char) => {
     filesByChar[char] = [];
   });
@@ -3021,19 +3028,43 @@ function generateAllSections() {
 
           const normalized = normalizeFileName(file);
           const encoded = encodeURIComponent(normalized);
+          const t = Date.now();
 
-          fetch(
-            `https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/${encoded}?t=${Date.now()}`,
-          )
-            .then((response) => response.text())
-            .then((text) => {
-              const newWin = window.open("about:blank", "_blank");
-              if (newWin) {
-                newWin.document.open();
-                newWin.document.write(text);
-                newWin.document.close();
-              }
-            });
+          const urls = [
+            `https://jsdelivr.net{encoded}?t=${t}`,
+            `https://jsdelivr.net{encoded}?t=${t}`,
+            `https://jsdelivr.net{encoded}?t=${t}`
+          ];
+
+          function openGame(html) {
+            const newWin = window.open("about:blank", "_blank");
+            if (newWin) {
+              newWin.document.open();
+              newWin.document.write(html);
+              newWin.document.close();
+            }
+          }
+
+          function tryFetch(index) {
+            if (index >= urls.length) return;
+            fetch(urls[index])
+              .then((res) => {
+                if (!res.ok) throw new Error("Not found");
+                return res.text();
+              })
+              .then((text) => {
+                if (
+                  text.includes("Package size exceeded") ||
+                  text.includes("Couldn't find the requested file")
+                ) {
+                  throw new Error("Invalid file");
+                }
+                openGame(text);
+              })
+              .catch(() => tryFetch(index + 1));
+          }
+
+          tryFetch(0);
         };
         btn.style.width = "100%";
         btn.style.height = "100%";
