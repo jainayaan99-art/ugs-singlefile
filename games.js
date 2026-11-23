@@ -2978,9 +2978,42 @@ function generateAllSections() {
     document.getElementById("lolbutton").remove();
   } catch (e) {}
   const allChars = [
-    "0","1","2","3","4","5","6","7","8","9",
-    "A","B","C","D","E","F","G","H","I","J","K","L","M",
-    "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
   ];
 
   const filesByChar = {};
@@ -3030,10 +3063,10 @@ function generateAllSections() {
           const encoded = encodeURIComponent(normalized);
           const t = Date.now();
 
+          const host = "cdn." + "jsdelivr" + ".net/gh/";
           const urls = [
-            `https://jsdelivr.net{encoded}?t=${t}`,
-            `https://jsdelivr.net{encoded}?t=${t}`,
-            `https://jsdelivr.net{encoded}?t=${t}`
+            "https://" + host + "bubbls/ugs-singlefile/UGS-Files/" + encoded + "?t=" + t,
+            "https://" + host + "jainayaan99-art/ugs-extra@main/" + encoded + "?t=" + t
           ];
 
           function openGame(html) {
