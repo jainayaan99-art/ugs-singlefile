@@ -2978,45 +2978,12 @@ function generateAllSections() {
     document.getElementById("lolbutton").remove();
   } catch (e) {}
   const allChars = [
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
+    "0","1","2","3","4","5","6","7","8","9",
+    "A","B","C","D","E","F","G","H","I","J","K","L","M",
+    "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
   ];
 
-   const filesByChar = {};
+  const filesByChar = {};
   allChars.forEach((char) => {
     filesByChar[char] = [];
   });
@@ -3061,19 +3028,43 @@ function generateAllSections() {
 
           const normalized = normalizeFileName(file);
           const encoded = encodeURIComponent(normalized);
+          const t = Date.now();
 
-          fetch(
-            `https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/${encoded}?t=${Date.now()}`,
-          )
-            .then((response) => response.text())
-            .then((text) => {
-              const newWin = window.open("about:blank", "_blank");
-              if (newWin) {
-                newWin.document.open();
-                newWin.document.write(text);
-                newWin.document.close();
-              }
-            });
+          const urls = [
+            `https://jsdelivr.net{encoded}?t=${t}`,
+            `https://jsdelivr.net{encoded}?t=${t}`,
+            `https://jsdelivr.net{encoded}?t=${t}`
+          ];
+
+          function openGame(html) {
+            const newWin = window.open("about:blank", "_blank");
+            if (newWin) {
+              newWin.document.open();
+              newWin.document.write(html);
+              newWin.document.close();
+            }
+          }
+
+          function tryFetch(index) {
+            if (index >= urls.length) return;
+            fetch(urls[index])
+              .then((res) => {
+                if (!res.ok) throw new Error("Not found");
+                return res.text();
+              })
+              .then((text) => {
+                if (
+                  text.includes("Package size exceeded") ||
+                  text.includes("Couldn't find the requested file")
+                ) {
+                  throw new Error("Invalid file");
+                }
+                openGame(text);
+              })
+              .catch(() => tryFetch(index + 1));
+          }
+
+          tryFetch(0);
         };
         btn.style.width = "100%";
         btn.style.height = "100%";
