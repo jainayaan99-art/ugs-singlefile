@@ -957,7 +957,7 @@ let files = [
 "clgdbreeze",
 "clgdlite",
 "clgdsubzero",
-"clgdwaves67",
+"clgdwave67",
 "clgdwaveover100mb",
 "clgeneralchaos",
 "clgenericfightermaybe",
